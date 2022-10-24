@@ -1,5 +1,6 @@
 
-from Cliente import Cliente
+from tempfile import gettempprefix
+import Cliente
 from datetime import date
 
 
@@ -9,4 +10,6 @@ class Cuenta:
         self._usuario = usuario 
         self._nro_cuenta = nro_cuenta
         self._fecha_creacion = date.today()
+
+    
 
