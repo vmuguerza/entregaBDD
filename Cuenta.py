@@ -2,7 +2,7 @@
 from tempfile import gettempprefix
 import Cliente
 from datetime import date
-
+ 
 
 class Cuenta:
     def __init__ (self, (Cliente) Cliente, usuario):

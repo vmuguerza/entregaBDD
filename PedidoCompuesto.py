@@ -7,4 +7,4 @@ class PedidoCompuesto:
         self._fecha = fecha 
         self._canal_de_compra = canalDeCompra
         
-   
+    

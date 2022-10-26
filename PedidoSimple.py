@@ -1,6 +1,6 @@
 from datetime import date
 from Producto import Producto
-
+ 
 class PedidoSimple:
     def __init__(self,(Producto) producto, cantidad, canalDeCompra, (PedidoCompuesto) PedidoCompuesto, (Cliente) Cliente):
         self._id = id

@@ -1,5 +1,5 @@
 import Cuenta
-
+ 
 class Tarjeta:
     def __init__(self,(Cuenta) Cuenta, tipo, emisor, numero):
         self._Cuenta = Cuenta 
