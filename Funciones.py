@@ -31,7 +31,7 @@ def modificar():
      
      if opcion==1:
           mail=input('ingrese el mail:')
-          cleinte.set_mail(mail)
+          cliente.set_mail(mail)
      if opcion==2:
           telefono=input('ingrese el telefono:')
           cliente.set_telefono(telefono)
@@ -61,6 +61,8 @@ def ingresar_pedido():
      return None  
 
 def ingresar_stock():
+     producto=input('Ingrese el codigo del producto que deaea actualizar stock:')
+     producto.set_stock(input('Ingrese el nuevo stock'))
      return None  
 
 def registrar_pago():
