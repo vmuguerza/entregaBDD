@@ -27,23 +27,6 @@ def menu():
           opcion = input('ingrese el numero:')
 
 
-def dar_de_alta():
-     return null
-
-def dar_de_baja():
-     return null   
-
-def modificar():
-     return null   
-
-def ingresar_pedido():
-     return null  
-
-def ingresar_stock():
-     return null  
-
-def registrar_pago():
-     return null  
 
 if __name__ =="__main__":
      pg_db = PostgresqlDatabase('dbd2', user='dbd2g1', password='dbd2#G1',
