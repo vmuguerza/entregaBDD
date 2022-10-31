@@ -1,7 +1,15 @@
 from json.tool import main
 from peewee import *
-
+from Cobro import Cobro
+from Cuenta import Cuenta
 from Funciones import *
+from PedidoCompuesto import PedidoCompuesto
+from PedidoSimple import PedidoSimple
+from Producto import Producto
+from Tarjeta import Tarjeta
+
+
+pg_db = PostgresqlDatabase('dbd2', user='dbd2g1', password='dbd2#G1', host='localhost', port=8888)
 
 
 def menu():
@@ -32,9 +40,7 @@ def menu():
 
 
 if __name__ =="__main__":
-     pg_db = PostgresqlDatabase('dbd2', user='dbd2g1', password='dbd2#G1',
-                           host='127.0.0.1', port=8888)
-
-     
+     pg_db.connect()
+     pg_db.create_tables(Cliente, Cuenta, Cobro, PedidoCompuesto, PedidoSimple, Producto, Tarjeta)
 
      
