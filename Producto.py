@@ -1,10 +1,9 @@
 
+from database import BaseModel
 
-
-
-class Producto:
+class Producto(BaseModel):
     def __init__(self, nombre, stock, precio, qr):
-        self._codigo = codigo 
+        #self._codigo = codigo #Como se genera 
         self._nombre = nombre 
         self._stock = stock 
         self._precio = precio 
