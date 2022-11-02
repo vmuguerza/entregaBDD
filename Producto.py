@@ -1,14 +1,13 @@
 
 from database import BaseModel
+from peewee import *
 
 class Producto(BaseModel):
-    def __init__(self, nombre, stock, precio, qr):
-        #self._codigo = codigo #Como se genera 
-        self._nombre = nombre 
-        self._stock = stock 
-        self._precio = precio 
-        self._qr = qr
-
+    cod_producto = BigAutoField() 
+    nombre = CharField()
+    stock = IntegerField() 
+    precio = IntegerField() 
+    qr = IntegerField() 
 
     def get_precio(self):
         return self._precio

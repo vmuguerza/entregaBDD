@@ -1,12 +1,10 @@
 from database import BaseModel
+from peewee import *
 
-
-class PedidoCompuesto(BaseModel):
-    
-    def __init__(self,dni_cliente, fecha, canalDeCompra):
-        self._dni_cliente = dni_cliente 
-        self._id = id #como se genera 
-        self._fecha = fecha 
-        self._canal_de_compra = canalDeCompra
+class Pedido_compuesto(BaseModel):
+    dni_cliente = IntegerField()
+    id = BigAutoField() 
+    fecha = DateField() 
+    canal_de_compra = CharField()
         
     

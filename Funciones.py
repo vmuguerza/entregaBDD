@@ -1,4 +1,5 @@
 import Cliente
+from Pedido_simple import Pedido_simple
 
 
 def dar_de_alta():
@@ -56,7 +57,7 @@ def ingresar_pedido():
      print('Ingresar pedido')
      producto=input('')
      cantidad=input('')
-     nuevo_pedido=PedidoSimple(producto,cantidad,'aplicacion',None,cliente)
+     nuevo_pedido=Pedido_simple(producto,cantidad,'aplicacion',None,Cliente)
      print('pedido confirmado, el precio total es:',nuevo_pedido.get_precio_total)
      return None  
 

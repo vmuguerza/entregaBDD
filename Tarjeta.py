@@ -1,11 +1,15 @@
+from Config import Config
 import Cuenta
 from database import BaseModel
+from peewee import *
  
 class Tarjeta(BaseModel):
-    def __init__(self,nro_cuenta, tipo, emisor, numero):
-        self._Cuenta = nro_cuenta 
-        self._tipo = tipo 
-        self._emisor = emisor
-        self._numero = numero 
+    nro_cuenta = IntegerField()
+    tipo = CharField() 
+    emisor = CharField()
+    numero = IntegerField() 
+    vencimiento = DateField()
         
-        
+    class Meta: 
+        database= Config.db_pg
+

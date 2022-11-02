@@ -3,8 +3,8 @@ from peewee import *
 from Cobro import Cobro
 from Cuenta import Cuenta
 from Funciones import *
-from PedidoCompuesto import PedidoCompuesto
-from PedidoSimple import PedidoSimple
+from Pedido_compuesto import *
+from Pedido_simple import Pedido_simple
 from Producto import Producto
 from Tarjeta import Tarjeta
 
@@ -38,9 +38,20 @@ def menu():
           error()
 
 
-
 if __name__ =="__main__":
      pg_db.connect()
-     pg_db.create_tables(Cliente, Cuenta, Cobro, PedidoCompuesto, PedidoSimple, Producto, Tarjeta)
+     #pg_db.create_tables([Cliente, Cuenta, Cobro, Pedido_compuesto, Pedido_simple, Producto, Tarjeta])
+
+     pg_db.create_tables([Cliente])
+     pg_db.create_tables([Cuenta])
+     pg_db.create_tables([Cobro])
+     pg_db.create_tables([Pedido_compuesto])
+     pg_db.create_tables([Pedido_simple])
+     pg_db.create_tables([Producto])
+     pg_db.create_tables([Tarjeta])
+
+
+     while True:
+          menu()
 
      
