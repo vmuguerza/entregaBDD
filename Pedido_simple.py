@@ -1,5 +1,5 @@
 from datetime import date
-from database import BaseModel
+from database import *
 from Producto import Producto
 from peewee import *
  
@@ -28,6 +28,8 @@ class Pedido_simple (BaseModel):
     def set_estado_entragado(self):
         self._estado = 'entregado'
 
+    class Meta: 
+        database= db_pg
 
         
 

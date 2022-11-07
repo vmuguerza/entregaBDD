@@ -1,4 +1,4 @@
-import Cliente
+from Cliente import *
 from Pedido_simple import Pedido_simple
 
 
@@ -22,7 +22,7 @@ def dar_de_alta():
 
 def dar_de_baja():
      print('Dar de baja cliente:')
-     din=input('ingrese el dni del cliente:')
+     dni=input('ingrese el dni del cliente:')
      return None
 
 def modificar():

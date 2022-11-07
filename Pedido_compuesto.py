@@ -1,4 +1,4 @@
-from database import BaseModel
+from database import *
 from peewee import *
 
 class Pedido_compuesto(BaseModel):
@@ -6,5 +6,9 @@ class Pedido_compuesto(BaseModel):
     id = BigAutoField() 
     fecha = DateField() 
     canal_de_compra = CharField()
+
+    class Meta: 
+        database= db_pg
+
         
     

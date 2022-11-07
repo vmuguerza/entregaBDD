@@ -1,7 +1,6 @@
 
 from peewee import *
-from Config import *
-from database import BaseModel
+from database import *
 
 class Cliente (BaseModel):
     nombre = CharField(max_length=15, null=False, primary_key=True) #hacer esto en todas
@@ -16,8 +15,8 @@ class Cliente (BaseModel):
     aptartamento = CharField()
     cod_postal = IntegerField()
 
-    class Meta: 
-        database= Config.db_pg
+    class Meta:
+        database = db_pg
 
     def get_nombre(self):
         return self._nombre
@@ -81,13 +80,3 @@ class Cliente (BaseModel):
 
     def set_cod_postal(self, nuevo):
         self._cod_postal = nuevo
-
-    
-
-
-
-
-
-    
-    
-        

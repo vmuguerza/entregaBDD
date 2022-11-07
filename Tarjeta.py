@@ -1,6 +1,5 @@
-from Config import Config
 import Cuenta
-from database import BaseModel
+from database import *
 from peewee import *
  
 class Tarjeta(BaseModel):
@@ -11,5 +10,5 @@ class Tarjeta(BaseModel):
     vencimiento = DateField()
         
     class Meta: 
-        database= Config.db_pg
+        database= db_pg
 

@@ -1,5 +1,5 @@
 
-from database import BaseModel
+from database import *
 from peewee import *
 
 class Producto(BaseModel):
@@ -20,3 +20,6 @@ class Producto(BaseModel):
     
     def set_stock(self, nuevo_stock):
         self._stock = nuevo_stock
+
+    class Meta: 
+        database= db_pg

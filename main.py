@@ -1,16 +1,14 @@
 from json.tool import main
 from peewee import *
-from Cobro import Cobro
+from database import *
+from Cliente import *
 from Cuenta import Cuenta
-from Funciones import *
+from Cobro import Cobro
 from Pedido_compuesto import *
 from Pedido_simple import Pedido_simple
 from Producto import Producto
 from Tarjeta import Tarjeta
-
-
-pg_db = PostgresqlDatabase('dbd2', user='dbd2g1', password='dbd2#G1', host='localhost', port=8888)
-
+from Funciones import *
 
 def menu():
      print('Eliga una de las siguientes opciones:')
@@ -39,19 +37,17 @@ def menu():
 
 
 if __name__ =="__main__":
-     pg_db.connect()
+     db_pg.connect()
      #pg_db.create_tables([Cliente, Cuenta, Cobro, Pedido_compuesto, Pedido_simple, Producto, Tarjeta])
 
-     pg_db.create_tables([Cliente])
-     pg_db.create_tables([Cuenta])
-     pg_db.create_tables([Cobro])
-     pg_db.create_tables([Pedido_compuesto])
-     pg_db.create_tables([Pedido_simple])
-     pg_db.create_tables([Producto])
-     pg_db.create_tables([Tarjeta])
-
-
+     db_pg.create_tables([Cliente])
+     db_pg.create_tables([Cuenta])
+     db_pg.create_tables([Cobro])
+     db_pg.create_tables([Pedido_compuesto])
+     db_pg.create_tables([Pedido_simple])
+     db_pg.create_tables([Producto])
+     db_pg.create_tables([Tarjeta])
+ 
      while True:
           menu()
-
      

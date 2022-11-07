@@ -2,7 +2,7 @@
 from tempfile import gettempprefix
 import Cliente
 from datetime import date
-from database import BaseModel
+from database import *
 from peewee import *
 
  
@@ -12,5 +12,7 @@ class Cuenta(BaseModel):
     nro_cuenta = IntegerField()
     fecha_creacion = DateField()
 
-    
+    class Meta: 
+        database= db_pg
+
 
